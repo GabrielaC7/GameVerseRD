@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="images/game_gamepad_logo_icon_146876.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GameVerseRD Contact US</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p></p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>#34 Av Sarasota. <br> Santo Domingo, República Dominicana. <br> </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>829-731-0100 </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="Email">
+                        <p><span class="red">Email</span>: Elamordetuvida619a</p>
+                        <p>Ponte en contacto con nosotros en <span class="white">
+                            Elamordetuvida619a@gmail.com</span></p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form id="contactForm">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="fullname" required>
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="message" required></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <button type="submit" class="btn">Send</button>
+                        
+                    </div>
+                </form>
+                <div class="popup" id="popup">
+                    <img src="images/pngwing.com.png">
+                    <h2>Muchas Gracias!</h2>
+                    <p>Sus datos han sido enviados exitosamente. Gracias!</p>
+                    <button type="button" onclick="closePopup()">OK</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+        }
+
+        function closePopup()  {
+            popup.classList.remove("open-popup");
+            resetForm();
+            window.location.href = "http://127.0.0.1:5500/Index.html#home"; // Reemplaza "ruta-de-tu-página-de-inicio" con la URL de tu página de inicio
+        }
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            openPopup();
+        });
+        
+        let form = document.getElementById("contactForm");
+
+        function resetForm() {
+            form.reset();
+        }
+    </script>
+</body>
+</html>
